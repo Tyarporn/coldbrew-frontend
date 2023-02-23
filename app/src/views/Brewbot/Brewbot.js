@@ -9,4 +9,4 @@ function Brewbot() {
     );
 }
 
-export default Home;
+export default Brewbot;
