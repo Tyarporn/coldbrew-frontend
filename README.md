@@ -3,6 +3,8 @@
 
 # The front end for coldbrew-coders, an NYU senior design project for a product that allows users to discover new Discord bots.
 
+# To run, cd into the app directory, then run 'npm start'
+
 
 # About Us
  ## Shashanka Sharma
@@ -16,7 +18,6 @@ https://github.com/cameronvong
 
 ## Tahmeed Chowdhury
 https://github.com/chowdhurytahmeed
-
 
 # Tech Stack
 Main Language: Python 3.9 or greater
