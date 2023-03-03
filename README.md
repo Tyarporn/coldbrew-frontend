@@ -5,6 +5,8 @@
 
 # To run, cd into the app directory, then run 'npm start'
 
+# Be sure you are using nvm version 16.xx.x, as errors may occur otherwise
+
 
 # About Us
  ## Shashanka Sharma
