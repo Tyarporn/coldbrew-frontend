@@ -1,22 +1,29 @@
-import './App.css';
-import React from 'react';
+import "./App.css";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 
-function App() {
+import Home from "./Home";
+import About from "./About";
+import Discover from "./Discover";
+
+const App = () => {
   return (
-
     <div>
       <h1>BrewBots</h1>
-      <p> BrewBots is the premier service to distribute and discover new Discord bots </p>
-      <ul className="header">
-        <li><a href="/">Home</a></li>
-        <li><a href="/stuff">About</a></li>
-        <li><a href="/contact">Sign Up</a></li>
-      </ul>
-      <div className="content">
-
-      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/discover">Discover</a>
+      </nav>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/discover" element={<Discover />} />
+        </Routes>
+      </Router>
     </div>
-    );
-}
+  );
+};
 
 export default App;
