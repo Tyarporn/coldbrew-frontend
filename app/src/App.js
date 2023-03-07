@@ -3,20 +3,20 @@ import React from 'react';
 
 function App() {
   return (
-    <div className='header'>
-        <title> Other Stuff</title>
-    
-      <h1>BrewBots 2-22</h1>
-          <a href="https://www.neopets.com"> DISCOVER        </a>
 
+    <div>
+      <h1>BrewBots</h1>
+      <p> BrewBots is the premier service to distribute and discover new Discord bots </p>
+      <ul className="header">
+        <li><a href="/">Home</a></li>
+        <li><a href="/stuff">About</a></li>
+        <li><a href="/contact">Sign Up</a></li>
+      </ul>
+      <div className="content">
 
-            <a href="https://www.neopets.com"> ADD </a>
-
-
-              <p> Brewbots is the premier service to distribute and discover new Discord bots </p>
-
+      </div>
     </div>
-  );
+    );
 }
 
 export default App;
