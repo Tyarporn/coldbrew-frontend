@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 
-import Home from "./Home";
+import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Discover from "./views/Discover/Discover";
 import NavBar from "./components/NavigationBar/NavBar"
@@ -12,13 +12,13 @@ const App = () => {
     <div>
       <NavBar></NavBar>
       <h1>BrewBots</h1>
-      {/* <Router>
+      <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/discover" element={<Discover />} />
         </Routes>
-      </Router> */}
+      </Router>
     </div>
   );
 };
