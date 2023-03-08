@@ -5,23 +5,20 @@ import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 import Home from "./Home";
 import About from "./views/About/About";
 import Discover from "./views/Discover/Discover";
+import NavBar from "./components/NavigationBar/NavBar"
 
 const App = () => {
   return (
     <div>
+      <NavBar></NavBar>
       <h1>BrewBots</h1>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/discover">Discover</a>
-      </nav>
-      <Router>
+      {/* <Router>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/discover" element={<Discover />} />
         </Routes>
-      </Router>
+      </Router> */}
     </div>
   );
 };
