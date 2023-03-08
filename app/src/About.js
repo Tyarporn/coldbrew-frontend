@@ -7,8 +7,7 @@ class About extends Component {
                 <h2>About</h2>
                 <p>BrewBots was founded by 4 men on a mission.</p>
                 <h2>GOT QUESTIONS?</h2>
-                <p>The easiest thing to do is post on
-                our forums.
+                <p>The easiest thing to do is message us on Slack!
                 </p>
             </div>
         );
