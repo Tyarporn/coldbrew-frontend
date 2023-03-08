@@ -3,8 +3,8 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes, Link } from "react-router-dom";
 
 import Home from "./Home";
-import About from "./About";
-import Discover from "./Discover";
+import About from "./views/About/About";
+import Discover from "./views/Discover/Discover";
 
 const App = () => {
   return (
