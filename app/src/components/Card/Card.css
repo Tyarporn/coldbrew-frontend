@@ -1,0 +1,34 @@
+.card {
+    background-color: #333;
+    height:350px;
+}
+
+.symbols {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.middle-area {
+    text-align: center;
+    padding-right: 0px;
+    color:white;
+    /* float: right; */
+}
+
+.btn {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 0;
+    border-radius: 20px;
+    padding: 12px 30px;
+    margin-top: 0px;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #6c63ff;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+}
+.btn:hover {
+    background-color: purple;
+  }
