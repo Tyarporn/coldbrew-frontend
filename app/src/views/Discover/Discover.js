@@ -1,19 +1,18 @@
+import './Discover.css'
 import React, { Component } from "react";
+import Card from '../../components/Card/Card';
 
-class Discover extends Component {
-    render() {
+function Discover({image, name}) {
         return (
             <div>
-                <h2>Here's our bots!</h2>
-                <ol>
-                    <li>Stonkster</li>
-                    <li>Brewbot</li>
-                    <li>CricSco</li>
-                    <li>Brewmeister</li>
-                </ol>
+                <Card></Card>
             </div>
+            // <div className="container main-content">
+            // <section>
+            //     {Array.from({ length: 4 }, (_, i) => <Card image={image[i]} name={name[i]} />)}
+            // </section>
+            // </div>
         );
-    }
 }
 
 export default Discover;
