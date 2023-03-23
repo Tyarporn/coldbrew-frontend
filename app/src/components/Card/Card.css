@@ -20,7 +20,7 @@
     padding-right: 5px;
     border: 0;
     border-radius: 20px;
-    padding: 12px 30px;
+    padding: 16px 20px;
     margin-top: 0px;
     cursor: pointer;
     color: #FFF;
@@ -28,6 +28,7 @@
     height: 50px;
     width: 150px;
     text-align: center;
+    font-size: 18px;
 }
 .btn:hover {
     background-color: purple;
