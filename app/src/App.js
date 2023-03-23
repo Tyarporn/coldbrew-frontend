@@ -8,7 +8,7 @@ import Discover from "./views/Discover/Discover";
 import NavBar from "./components/NavigationBar/NavBar"
 import Brewmeister from "./views/Brewmeister/Brewmeister"
 import Brewbot from "./views/Brewbot/Brewbot";
-import Crisco from "./views/Crisco/Crisco";
+import CricSco from "./views/CricSco/CricSco";
 import Stonkster from "./views/Stonkster/Stonkster";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/discover" element={<Discover />} />
           <Route path='/brewmeister' element={<Brewmeister />} />
           <Route path='/brewbot' element={<Brewbot />} />
-          <Route path='/crisco' element={<Crisco />} />
+          <Route path='/cricsco' element={<CricSco />} />
           <Route path='/stonkster' element={<Stonkster />} />
         </Routes>
       </Router>
