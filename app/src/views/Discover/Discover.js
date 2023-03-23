@@ -43,6 +43,12 @@ function Discover({image, name}) {
         })
       }
 
+      useEffect(() => {
+        fetchBotNames()
+        fetchBotDescription()
+        fetchBotID()
+      }, [])
+
 
     
     return (
