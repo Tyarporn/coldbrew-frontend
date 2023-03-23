@@ -10,6 +10,7 @@ import Brewmeister from "./views/Brewmeister/Brewmeister"
 import Brewbot from "./views/Brewbot/Brewbot";
 import CricSco from "./views/CricSco/CricSco";
 import Stonkster from "./views/Stonkster/Stonkster";
+import Contact from "./views/Contact/Contact"
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route path='/brewbot' element={<Brewbot />} />
           <Route path='/cricsco' element={<CricSco />} />
           <Route path='/stonkster' element={<Stonkster />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </Router>
     </div>
