@@ -1,14 +1,17 @@
 import React, { Component } from "react";
+import './Contact.css'
 
 class About extends Component {
     render() {
         return (
             <div>
-                <h2>About</h2>
-                <p>BrewBots was founded by 4 men on a mission.</p>
-                <h2>GOT QUESTIONS?</h2>
-                <p>The easiest thing to do is message us!
-                </p>
+                <h2>Contact</h2>
+                <text>
+                    <a href="https://github.com/cameronvong"> Cameron Vong </a> <br />
+                    <a href="https://github.com/Tyarporn"> Ty Arpornsuksant </a> <br />
+                    <a href="https://github.com/Shashanka-Sharma"> Shashanka Sharma </a> <br />
+                    <a href="https://github.com/chowdhurytahmeed "> Tahmeed Chowdhury </a> <br />
+                </text>
             </div>
         );
     }
