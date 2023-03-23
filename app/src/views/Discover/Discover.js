@@ -14,7 +14,7 @@ function Discover({image, name}) {
         return axios.get("http://127.0.0.1:8080/listbots")
         .then(res => {
             console.log(res)
-            setProductName(res.data.product_data)
+            setBotName(res.Data)
         })
         .catch(err => {
             console.log(err)
@@ -25,7 +25,18 @@ function Discover({image, name}) {
         return axios.get("http://127.0.0.1:8000/show_bot_ids")
         .then(res => {
             console.log(res)
-            setProductName(res.data.product_data)
+            setBotID(res.Data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+      const fetchBotDescription = async () => {
+        return axios.get("http://127.0.0.1:8000/show_bot_details")
+        .then(res => {
+            console.log(res)
+            setBotDescription(res.Data)
         })
         .catch(err => {
             console.log(err)
