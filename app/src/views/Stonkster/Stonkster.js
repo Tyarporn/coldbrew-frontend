@@ -1,4 +1,5 @@
 import './Stonkster.css'
+import React, { Component } from "react";
 
 
 function Stonkster() {
