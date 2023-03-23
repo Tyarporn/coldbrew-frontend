@@ -1,8 +1,8 @@
-import './Crisco.css'
+import './CricSco.css'
 import React, { Component } from "react";
 
 
-function Crisco() {
+function CricSco() {
     return (
         <div className='crisco'>
             <h1>this is the crisco page</h1>
@@ -10,4 +10,4 @@ function Crisco() {
     );
 }
 
-export default Crisco;
+export default CricSco;
