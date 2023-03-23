@@ -6,6 +6,10 @@ import Home from "./views/Home/Home";
 import About from "./views/About/About";
 import Discover from "./views/Discover/Discover";
 import NavBar from "./components/NavigationBar/NavBar"
+import Brewmeister from "./views/Brewmeister/Brewmeister"
+import Brewbot from "./views/Brewbot/Brewbot";
+import Crisco from "./views/Crisco/Crisco";
+import Stonkster from "./views/Stonkster/Stonkster";
 
 const App = () => {
   return (
@@ -17,6 +21,8 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path='/brewmeister' element
+          
         </Routes>
       </Router>
     </div>
