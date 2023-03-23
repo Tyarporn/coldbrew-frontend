@@ -52,11 +52,13 @@ function Discover({image, name}) {
 
     
     return (
+
         <div className="container main-content">
-        <section>
-            {Array.from({ length: 4 }, (_, i) => <Card image={'BrewBotPic.png'} name={botName[i]} />)}
-        </section>
+            <section>
+                {Array.from({ length: 4 }, (_, i) => <Card image={'BrewBotPic.png'} name={botName[i]} botDesc={botDescription[botName[i]]} botID={botID[botName[i]]}/>)}
+            </section>
         </div>
+
     );
 }
 
