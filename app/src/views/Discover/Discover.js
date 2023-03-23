@@ -14,7 +14,7 @@ function Discover({image, name}) {
         return axios.get("http://127.0.0.1:8080/listbots")
         .then(res => {
             console.log(res)
-            setBotName(res.Data)
+            setBotName(res.data.Data)
         })
         .catch(err => {
             console.log(err)
@@ -22,10 +22,10 @@ function Discover({image, name}) {
       }
 
       const fetchBotID = async () => {
-        return axios.get("http://127.0.0.1:8000/show_bot_ids")
+        return axios.get("http://127.0.0.1:8080/show_bot_ids")
         .then(res => {
             console.log(res)
-            setBotID(res.Data)
+            setBotID(res.data.Data)
         })
         .catch(err => {
             console.log(err)
@@ -33,10 +33,10 @@ function Discover({image, name}) {
       }
 
       const fetchBotDescription = async () => {
-        return axios.get("http://127.0.0.1:8000/show_bot_details")
+        return axios.get("http://127.0.0.1:8080/show_bot_details")
         .then(res => {
             console.log(res)
-            setBotDescription(res.Data)
+            setBotDescription(res.data.Data)
         })
         .catch(err => {
             console.log(err)
@@ -52,17 +52,11 @@ function Discover({image, name}) {
 
     
     return (
-        <div>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
-            <Card></Card>
+        <div className="container main-content">
+        <section>
+            {Array.from({ length: 4 }, (_, i) => <Card image={'BrewBotPic.png'} name={botName[i]} />)}
+        </section>
         </div>
-        // <div className="container main-content">
-        // <section>
-        //     {Array.from({ length: 4 }, (_, i) => <Card image={image[i]} name={name[i]} />)}
-        // </section>
-        // </div>
     );
 }
 
