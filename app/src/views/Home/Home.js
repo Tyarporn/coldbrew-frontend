@@ -4,7 +4,7 @@ import './Home.css'
 function Home() {
     return (
         <div className='home'>
-            <h1>this is the home page</h1>
+            <h1>BrewBots is the premier website to discover and share Discord bots</h1>
         </div>
     );
 }
