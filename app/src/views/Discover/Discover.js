@@ -11,7 +11,18 @@ function Discover({image, name}) {
     const [botDescription, setBotDescription] = useState([])
 
     const fetchBotNames = async () => {
-        return axios.get("http://127.0.0.1:8080/")
+        return axios.get("http://127.0.0.1:8080/listbots")
+        .then(res => {
+            console.log(res)
+            setProductName(res.data.product_data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+      const fetchBotID = async () => {
+        return axios.get("http://127.0.0.1:8000/show_bot_ids")
         .then(res => {
             console.log(res)
             setProductName(res.data.product_data)
