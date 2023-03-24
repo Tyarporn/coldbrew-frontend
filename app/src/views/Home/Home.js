@@ -5,7 +5,9 @@ import React from 'react'
 function Home() {
     return (
         <div className='home'>
-            <h1>this is the home page</h1>
+            <h2>Hi there!</h2>
+            <p>Welcome to BrewBots</p>
+            <p>The premier place to discover and distribute Discord bots.</p>
         </div>
     );
 }
