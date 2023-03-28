@@ -12,6 +12,7 @@ import CricSco from "./views/CricSco/CricSco";
 import Stonkster from "./views/Stonkster/Stonkster";
 import Contact from "./views/Contact/Contact"
 import Login from "./views/Login/Login"
+import Registration from "./views/Registration/Registration";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           <Route path='/stonkster' element={<Stonkster />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Registration />} />
         </Routes>
       </Router>
     </div>
