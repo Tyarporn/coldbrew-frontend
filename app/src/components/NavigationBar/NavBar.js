@@ -10,6 +10,7 @@ function NavBar() {
                 <li><a href='/discover'>Discover</a></li>
                 <li><a href='/about'>About</a></li>
                 <li><a href="/contact">Contact Us</a></li>
+                <li className='last_button'><a href="/login">Login</a></li>
             </ul>
             </div>
         </div>
