@@ -1,5 +1,8 @@
 import './CricSco.css'
 import React, { Component } from "react";
+import Card from '../../components/Card/Card'
+import {useState, useEffect} from 'react';
+import axios from "axios"
 
 
 function CricSco() {
