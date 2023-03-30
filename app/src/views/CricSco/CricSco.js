@@ -50,10 +50,10 @@ function CricSco() {
         fetchBotDescription()
         fetchBotID()
       }, [])
-      
+
     return (
-        <div className='crisco'>
-            <h1>this is the crisco page</h1>
+        <div>
+            <Card image={images[2]} name={botName[2]} botDesc={botDescription[botName[2]]} botID={botID[botName[2]]}></Card>
         </div>
     );
 }
