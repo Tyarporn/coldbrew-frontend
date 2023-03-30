@@ -1,11 +1,15 @@
 # Coldbrew-Frontend
+The front end for coldbrew-coders, an NYU senior design project for a product that allows users to discover new Discord bots. 
 
+# Building and Testing The Project
+## Initial Setup (Local)
+1. Clone the repository onto your local machine with ```https://github.com/Tyarporn/coldbrew-frontend```.
+2. Create a new terminal shell
+3. Navigate to server with ```cd app``` and run  ```npm install``` to download the necessary package dependencies.
+4. Run ```npm start``` and open the react app on "http://localhost:3000/"
+5. Run the back-end server in a separate terminal shell, please redirect to https://github.com/Tyarporn/coldbrew-coders/blob/main/README.md for instructions.
 
-# The front end for coldbrew-coders, an NYU senior design project for a product that allows users to discover new Discord bots.
-
-# To run, cd into the app directory, then run 'npm start'
-
-# Be sure you are using nvm version 16.xx.x, as errors may occur otherwise
+Be sure you are using nvm version 16.xx.x, as errors may occur otherwise
 
 
 # About Us
