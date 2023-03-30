@@ -50,10 +50,10 @@ function Stonkster() {
         fetchBotDescription()
         fetchBotID()
       }, [])
-      
+
     return (
-        <div className='stonkster'>
-            <h1>this is the stonkster page</h1>
+        <div>
+            <Card image={images[3]} name={botName[3]} botDesc={botDescription[botName[3]]} botID={botID[botName[3]]}></Card>
         </div>
     );
 }
