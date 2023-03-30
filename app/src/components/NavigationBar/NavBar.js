@@ -5,21 +5,22 @@ import axios from "axios"
 
 function NavBar() {
 
-    const [mainMenu, setMainMenu] = useState([])
-    const fetchHATEOAS = async () => {
-        return axios.get("http://127.0.0.1:8080/main_menu")
-        .then(res => {
-            console.log(res)
-            setBotName(res.data.Data)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-      }
+    // const [mainMenu, setMainMenu] = useState([])
+
+    // const fetchHATEOAS = async () => {
+    //     return axios.get("http://127.0.0.1:8080/main_menu")
+    //     .then(res => {
+    //         console.log(res)
+    //         setMainMenu(res.data.Choices)
+    //     })
+    //     .catch(err => {
+    //         console.log(err)
+    //     })
+    //   }
     
-      useEffect(() => {
-        fetchHATEOAS()
-      }, [])
+    //   useEffect(() => {
+    //     fetchHATEOAS()
+    //   }, [])
 
     return (
         <div className="container">
