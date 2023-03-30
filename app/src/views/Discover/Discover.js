@@ -9,6 +9,7 @@ function Discover({image, name}) {
     const [botName, setBotName] = useState([])
     const [botID, setBotID] = useState([])
     const [botDescription, setBotDescription] = useState([])
+    const images = ['brewmeister.png', 'brew_bot_logo.png', 'crisCo_logo.jpeg', 'stonkster_logo.png']
 
     const fetchBotNames = async () => {
         return axios.get("http://127.0.0.1:8080/listbots")
@@ -55,7 +56,7 @@ function Discover({image, name}) {
 
         <div className="container main-content">
             <section>
-                {Array.from({ length: 4 }, (_, i) => <Card image={'BrewBotPic.png'} name={botName[i]} botDesc={botDescription[botName[i]]} botID={botID[botName[i]]}/>)}
+                {Array.from({ length: 4 }, (_, i) => <Card image={images[i]} name={botName[i]} botDesc={botDescription[botName[i]]} botID={botID[botName[i]]}/>)}
             </section>
         </div>
 
