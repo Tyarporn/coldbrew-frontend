@@ -1,11 +1,59 @@
 import './Brewmeister.css'
 import React, { Component } from "react";
+import Card from '../../components/Card/Card'
+import {useState, useEffect} from 'react';
+import axios from "axios"
 
 
 function Brewmeister() {
+
+    const [botName, setBotName] = useState([])
+    const [botID, setBotID] = useState([])
+    const [botDescription, setBotDescription] = useState([])
+    const images = ['brewmeister.png', 'brew_bot_logo.png', 'crisCo_logo.jpeg', 'stonkster_logo.png']
+
+    const fetchBotNames = async () => {
+        return axios.get("http://127.0.0.1:8080/listbots")
+        .then(res => {
+            console.log(res)
+            setBotName(res.data.Data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+      const fetchBotID = async () => {
+        return axios.get("http://127.0.0.1:8080/show_bot_ids")
+        .then(res => {
+            console.log(res)
+            setBotID(res.data.Data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+      const fetchBotDescription = async () => {
+        return axios.get("http://127.0.0.1:8080/show_bot_details")
+        .then(res => {
+            console.log(res)
+            setBotDescription(res.data.Data)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+      }
+
+      useEffect(() => {
+        fetchBotNames()
+        fetchBotDescription()
+        fetchBotID()
+      }, [])
+
     return (
-        <div className='brewmeister'>
-            <h1>this is the brewmeister page</h1>
+        <div>
+            <Card image='brewmeister.png' name={botName[0]} botDesc={botDescription[botName[0]]} botID={botID[botName[0]]}></Card>
         </div>
     );
 }
