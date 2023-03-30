@@ -50,10 +50,10 @@ function Brewbot() {
         fetchBotDescription()
         fetchBotID()
       }, [])
-      
+
     return (
-        <div className='brewbot'>
-            <h1>this is the brewbot page</h1>
+        <div>
+            <Card image={images[1]} name={botName[1]} botDesc={botDescription[botName[1]]} botID={botID[botName[1]]}></Card>
         </div>
     );
 }
