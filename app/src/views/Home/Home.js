@@ -4,14 +4,15 @@ import {useState, useEffect} from 'react';
 import axios from "axios"
 
 
+
 function Home() {
     const [mainMenu, setMainMenu] = useState([])
 
     const fetchHATEOAS = async () => {
         return axios.get("http://127.0.0.1:8080/main_menu")
         .then(res => {
-            console.log(res)
-            setMainMenu(res.data)
+            console.log("res.data",res.data.Choices["2"])
+            setMainMenu(res.data.Choices.a)
         })
         .catch(err => {
             console.log(err)
@@ -22,6 +23,8 @@ function Home() {
         fetchHATEOAS()
       }, [])
     return (
+        console.log("return1", mainMenu.url),
+        // console.log("return2", Object.values(Object.values(mainMenu)[2])),
         <div className='home'>
             {/* <div>
                 {mainMenu.map(item => <div>{item}</div>)}
