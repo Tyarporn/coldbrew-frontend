@@ -5,9 +5,9 @@ class About extends Component {
         return (
             <div>
                 <h2>About</h2>
-                <p>BrewBots was founded by 4 men on a mission to graduate.</p>
+                <p>BrewBots is a service designed to distribute Discord Bots created for a senior project.</p>
                 <h2>GOT QUESTIONS?</h2>
-                <p>The easiest thing to do is message us on Slack!
+                <p> Please check out our GitHub pages for questions related to the development and running of this project.
                 </p>
             </div>
         );
