@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Route, BrowserRouter as Router, Routes} from "react-router-dom";
+import { Navigate, Route, BrowserRouter as Router, Routes} from "react-router-dom";
 
 import Home from "./views/Home/Home";
 import About from "./views/About/About";
@@ -21,7 +21,8 @@ const App = () => {
       <h1>Brewbots</h1>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Navigate to="/home"/>}/>
+          <Route exact path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/discover" element={<Discover />} />
           <Route path='/brewmeister' element={<Brewmeister />} />
