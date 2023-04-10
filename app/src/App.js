@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <img src={myImage} alt="My Image" style={{ width: '20%', height: 'auto' }} /> 
+      <img src={myImage} alt="BrewBots Logo" style={{ width: '20%', height: 'auto' }} /> 
       <Router>
         <Routes>
           <Route exact path="/" element={<Navigate to="/home"/>}/>

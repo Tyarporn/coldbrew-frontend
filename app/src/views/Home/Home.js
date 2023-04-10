@@ -4,7 +4,6 @@ import React from 'react'
 // import axios from "axios"
 
 
-const myImage = 'transparent_company_logo.png';
 function Home() {
  
     return (
