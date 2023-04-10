@@ -55,6 +55,11 @@ function Discover({image, name}) {
     return (
 
         <div className="container main-content">
+            <div>
+                <h2>Discover</h2>
+                <h3>The discover page is meant to guide users in finding new and powerful bots to add to their servers! </h3>
+
+            </div>
             <section>
                 {Array.from({ length: 4 }, (_, i) => <Card image={images[i]} name={botName[i]} botDesc={botDescription[botName[i]]} botID={botID[botName[i]]}/>)}
             </section>
