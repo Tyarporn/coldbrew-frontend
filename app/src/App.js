@@ -14,11 +14,13 @@ import Contact from "./views/Contact/Contact"
 import Login from "./views/Login/Login"
 import Registration from "./views/Registration/Registration";
 
+const myImage = 'new_bb_logo.png';
+
 const App = () => {
   return (
     <div>
       <NavBar></NavBar>
-      <h1>BREWBOTS</h1>
+      <img src={myImage} alt="My Image" style={{ width: '20%', height: 'auto' }} /> 
       <Router>
         <Routes>
           <Route exact path="/" element={<Navigate to="/home"/>}/>
