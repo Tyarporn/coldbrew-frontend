@@ -1,5 +1,5 @@
 import "./App.css";
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import { Navigate, Route, BrowserRouter as Router, Routes} from "react-router-dom";
 
 import Home from "./views/Home/Home";
@@ -17,23 +17,33 @@ import Registration from "./views/Registration/Registration";
 const myImage = 'new_bb_logo.png';
 
 const App = () => {
+
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setLoggedIn(true);
+    }
+  }, []);
+  
   return (
     <div>
-      <NavBar></NavBar>
-      <img src={myImage} alt="BrewBots Logo" style={{ width: '20%', height: 'auto' }} /> 
+      {loggedIn && <NavBar />}
+      <img src={myImage} alt="BrewBots Logo" style={{ width: '20%', height: 'auto' }} />
       <Router>
         <Routes>
-          <Route exact path="/" element={<Navigate to="/home"/>}/>
-          <Route exact path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/discover" element={<Discover />} />
-          <Route path='/brewmeister' element={<Brewmeister />} />
-          <Route path='/brewbot' element={<Brewbot />} />
-          <Route path='/cricsco' element={<CricSco />} />
-          <Route path='/stonkster' element={<Stonkster />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Registration />} />
+        <Route exact path="/" element={loggedIn ? <Navigate to={Home}/> : <Navigate to={Login}/>} />
+        <Route exact path="/home" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/discover" element={<Discover />} />
+        <Route path='/brewmeister' element={<Brewmeister />} />
+        <Route path='/brewbot' element={<Brewbot />} />
+        <Route path='/cricsco' element={<CricSco />} />
+        <Route path='/stonkster' element={<Stonkster />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Registration />} />
         </Routes>
       </Router>
     </div>
