@@ -2,21 +2,23 @@ import './Login.css'
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
     
         try {
-          const response = await axios.post('/api/login', { email, password });
+          const response = await axios.post('http://127.0.0.1:8080/auth', {'username': email, 'password': password});
           const token = response.data.token;
           localStorage.setItem('token', token);
-          // redirect to dashboard or homepage
+          navigate('/home');  // Redirect to the homepage
         } catch (error) {
           console.error(error);
         }
