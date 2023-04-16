@@ -13,4 +13,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Settings;
