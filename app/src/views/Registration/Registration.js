@@ -1,5 +1,5 @@
 import './Registration.css'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -11,21 +11,43 @@ function Registration() {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
+    const [users, setUsers] = useState([]);
     const navigate = useNavigate();
+
+    const fetchUsers = async () => {
+      return axios.get("http://127.0.0.1:8080/show_users")
+      .then(res => {
+          console.log(res)
+          setUsers(res.data.Data.Users)
+      })
+      .catch(err => {
+          console.log(err)
+      })
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-
         try {
+          if (users.includes(email)) {
+            alert("This user already exists, use a different email.")
+          }
           if (checkPassword === password) { // check to see if the user typed password correctly
             const response = await axios.post('http://127.0.0.1:8080/create_user', {'username': email, 'password': password, 'email': email, 'first_name': firstName, 'last_name': lastName, 'cart': {}});
             navigate('/login');  // Redirect to login page
           }
+          else {
+            alert("Please verify the password is typed correctly.")
+          }
         } catch (error) {
+          alert("There was an error registering your account. Please verify the email is unique and you type the same password.")
           console.error(error);
         }
       };
+
+      useEffect(() => {
+        fetchUsers();
+      }, [])
 
     return (
         <div className='sign-up-form'>
