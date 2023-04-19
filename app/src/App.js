@@ -31,7 +31,7 @@ const App = () => {
   return (
     <div>
       {loggedIn && <NavBar />}
-      <img src={myImage} alt="BrewBots Logo" style={{ width: '20%', height: 'auto' }} />
+      <center><img src={myImage} alt="BrewBots Logo" style={{ width: '20%', height: 'auto', }} /></center>
       <Router>
         <Routes>
         <Route exact path="/" element={loggedIn ? <Navigate to={Home}/> : <Navigate to={Login}/>} />
