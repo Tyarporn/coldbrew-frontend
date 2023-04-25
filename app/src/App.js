@@ -10,10 +10,10 @@ import Brewmeister from "./views/Brewmeister/Brewmeister"
 import Brewbot from "./views/Brewbot/Brewbot";
 import CricSco from "./views/CricSco/CricSco";
 import Stonkster from "./views/Stonkster/Stonkster";
-import Contact from "./views/Contact/Contact"
-import Login from "./views/Login/Login"
+import Contact from "./views/Contact/Contact";
+import Login from "./views/Login/Login";
 import Registration from "./views/Registration/Registration";
-import Settings from "./views/Settings/Settings"
+import Settings from "./views/Settings/Settings";
 
 const myImage = 'new_bb_logo.png';
 

@@ -11,11 +11,13 @@ function Login() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+
     const handleSubmit = async (event) => {
         event.preventDefault();
     
         try {
-          const response = await axios.post('http://127.0.0.1:8080/auth', {'username': email, 'password': password});
+          const response = await axios.post(`${apiURI}/auth`, {'username': email, 'password': password});
           const token = response.data.token;
           localStorage.setItem('token', token);
           navigate('/home');  // Redirect to the homepage

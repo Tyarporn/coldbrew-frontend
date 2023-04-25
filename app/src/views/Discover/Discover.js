@@ -11,8 +11,10 @@ function Discover({image, name}) {
     const [botDescription, setBotDescription] = useState([])
     const images = ['brewmeister.png', 'brew_bot_logo.png', 'crisCo_logo.jpeg', 'stonkster_logo.png']
 
+    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+
     const fetchBotNames = async () => {
-        return axios.get("http://127.0.0.1:8080/listbots")
+        return axios.get(`${apiURI}/listbots`)
         .then(res => {
             console.log(res)
             setBotName(res.data.Data)
@@ -23,7 +25,7 @@ function Discover({image, name}) {
       }
 
       const fetchBotID = async () => {
-        return axios.get("http://127.0.0.1:8080/show_bot_ids")
+        return axios.get(`${apiURI}/show_bot_ids`)
         .then(res => {
             console.log(res)
             setBotID(res.data.Data)
@@ -34,7 +36,7 @@ function Discover({image, name}) {
       }
 
       const fetchBotDescription = async () => {
-        return axios.get("http://127.0.0.1:8080/show_bot_details")
+        return axios.get(`${apiURI}/show_bot_details`)
         .then(res => {
             console.log(res)
             setBotDescription(res.data.Data)

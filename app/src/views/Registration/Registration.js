@@ -14,8 +14,10 @@ function Registration() {
     const [users, setUsers] = useState([]);
     const navigate = useNavigate();
 
+    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+
     const fetchUsers = async () => {
-      return axios.get("http://127.0.0.1:8080/show_users")
+      return axios.get(`${apiURI}/show_users`)
       .then(res => {
           console.log(res)
           setUsers(res.data.Data.Users)
@@ -33,7 +35,7 @@ function Registration() {
             alert("This user already exists, use a different email.")
           }
           if (checkPassword === password) { // check to see if the user typed password correctly
-            const response = await axios.post('http://127.0.0.1:8080/create_user', {'username': email, 'password': password, 'email': email, 'first_name': firstName, 'last_name': lastName, 'cart': {}});
+            const response = await axios.post(`${apiURI}/create_user`, {'username': email, 'password': password, 'email': email, 'first_name': firstName, 'last_name': lastName, 'cart': {}});
             navigate('/login');  // Redirect to login page
           }
           else {
