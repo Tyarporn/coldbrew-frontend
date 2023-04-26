@@ -39,7 +39,7 @@ function Login() {
                 <button type="submit" className="signup-btn">Login</button>
                 <hr/>
                 <p>Don't Have an Account? Register Now!</p>
-                <a href={'http://localhost:3000/register'} >
+                <a href={`${apiURI}/register`} >
                         <button type='button' className='signup-btn'>Register</button>
                 </a>
             </form>

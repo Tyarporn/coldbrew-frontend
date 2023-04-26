@@ -69,7 +69,7 @@ function Registration() {
                 <button type="submit" className="signup-btn">Create Account</button>
                 <hr/>
                 <p>Already Have an Account?</p>
-                <a href={'http://localhost:3000/login'} >
+                <a href={`${apiURI}/login`} >
                         <button onClick type='button' className='signup-btn'>Login</button>
                 </a>
             </form>
