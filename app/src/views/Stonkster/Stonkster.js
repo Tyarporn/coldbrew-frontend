@@ -12,8 +12,8 @@ function Stonkster() {
     const [botDescription, setBotDescription] = useState([])
     const images = ['brewmeister.png', 'brew_bot_logo.png', 'crisCo_logo.jpeg', 'stonkster_logo.png']
 
-    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
-    // const apiURI = process.env.REACT_APP_REACT_APP_BACKEND_URL;
+    // const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+    const apiURI = process.env.REACT_APP_BACKEND_URL;
 
     const fetchBotNames = async () => {
         return axios.get(`${apiURI}/listbots`)
