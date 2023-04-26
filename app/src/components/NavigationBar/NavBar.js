@@ -11,7 +11,8 @@ function NavBar() {
     const [mainMenuD, setMainMenuD] = useState([])
     const [mainMenuF, setMainMenuF] = useState([])
 
-    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+    // const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+    const apiURI = process.env.REACT_APP_BACKEND_URL;
  
     const fetchHATEOAS = async () => {
         return axios.get(`${apiURI}/main_menu`)
