@@ -39,7 +39,7 @@ function Login() {
                 <button type="submit" className="signup-btn">Login</button>
                 <hr/>
                 <p>Don't Have an Account? Register Now!</p>
-                <a href={`${process.env.REACT_APP_BACKEND_URL}/register`} >
+                <a href={`${process.env.REACT_APP_FRONTEND_URL}/register`} >
                         <button type='button' className='signup-btn'>Register</button>
                 </a>
             </form>
