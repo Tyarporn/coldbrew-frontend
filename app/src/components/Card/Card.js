@@ -9,7 +9,7 @@ function Card({image, name, botDesc, botID}) {
 
             <div className='row product'>
                 <div className="middle-area">
-                    <a href={apiURI + name} >
+                    <a href={"http://52.72.178.160:3000" + name} >
                         <button onClick type='button' className='btn'>{name}</button>
                     </a>
                     <br></br>
