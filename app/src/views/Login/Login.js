@@ -11,8 +11,8 @@ function Login() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
-    // const apiURI = process.env.REACT_APP_REACT_APP_BACKEND_URL;
+    // const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+    const apiURI = process.env.REACT_APP_REACT_APP_BACKEND_URL;
 
     const handleSubmit = async (event) => {
         event.preventDefault();

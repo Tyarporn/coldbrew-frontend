@@ -14,8 +14,8 @@ function Registration() {
     const [users, setUsers] = useState([]);
     const navigate = useNavigate();
 
-    const apiURI = process.env.REACT_APP_LOCALHOST_URL;
-    // const apiURI = process.env.REACT_APP_REACT_APP_BACKEND_URL;
+    // const apiURI = process.env.REACT_APP_LOCALHOST_URL;
+    const apiURI = process.env.REACT_APP_REACT_APP_BACKEND_URL;
 
     const fetchUsers = async () => {
       return axios.get(`${apiURI}/show_users`)
