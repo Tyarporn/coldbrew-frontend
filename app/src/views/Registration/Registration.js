@@ -69,7 +69,7 @@ function Registration() {
                 <button type="submit" className="signup-btn">Create Account</button>
                 <hr/>
                 <p>Already Have an Account?</p>
-                <a href={`${apiURI}/login`} >
+                <a href={`${process.env.REACT_APP_FRONTEND_URL}/login`} >
                         <button onClick type='button' className='signup-btn'>Login</button>
                 </a>
             </form>
