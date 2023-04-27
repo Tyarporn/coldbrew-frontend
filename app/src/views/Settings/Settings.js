@@ -7,6 +7,8 @@ import './Settings.css'
 function Settings() {
 
     const [email, setEmail] = useState('');
+    const [currEmail, setCurrEmail] = useState('');
+    const [currPass, setCurrPass] = useState('');
     const [password, setPassword] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
     const [users, setUsers] = useState([]);
@@ -27,6 +29,13 @@ function Settings() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        console.log(currEmail);
+        console.log(currPass);
+        console.log(email);
+        console.log(password);
+
+
         try {
             if (users.includes(email)) {
                 alert("This user already exists, use a different email.")
@@ -64,6 +73,10 @@ function Settings() {
         <div className='Settings'>
             <h1>Change Information</h1>
             <form onSubmit={handleSubmit}>
+                <label>Please Enter Your Current Email</label>
+                <input type="email" className="input-box" placeholder="Your Current Email" onChange={(e) => setCurrEmail(e.target.value)}></input>
+                <label>Please Enter Your Current Password</label>
+                <input type="password" className="input-box" placeholder="Your Current Password" onChange={(e) => setCurrPass(e.target.value)}></input>
                 <label>Please Enter Your New Email</label>
                 <input type="email" className="input-box" placeholder="Your New Email" onChange={(e) => setEmail(e.target.value)}></input>
                 <label>Please Enter Your New Password</label>
@@ -71,7 +84,7 @@ function Settings() {
                 <label>Please Re-Enter Your Password</label>
                 <input type="password" className="input-box" placeholder="Your New Password" onChange={(e) => setCheckPassword(e.target.value)}></input>
                 <a href={`${process.env.REACT_APP_FRONTEND_URL}/settings`} >
-                    <button type='button' className='signup-btn'>Change Information</button>
+                    <button type='submit' className='signup-btn'>Change Information</button>
                 </a>
             </form>
 
