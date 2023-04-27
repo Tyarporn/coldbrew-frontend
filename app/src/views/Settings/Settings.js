@@ -8,8 +8,6 @@ function Settings() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [firstName, setFirstName] = useState('');
-    const [lastName, setLastName] = useState('');
     const [checkPassword, setCheckPassword] = useState('');
     const [users, setUsers] = useState([]);
     const navigate = useNavigate();
@@ -29,7 +27,6 @@ function Settings() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
         try {
             if (users.includes(email)) {
                 alert("This user already exists, use a different email.")
@@ -42,11 +39,25 @@ function Settings() {
                 alert("Please verify the password is typed correctly.")
             }
         } catch (error) {
-            alert("There was an error registering your account. Please verify the email is unique and you type the same password.")
+            alert("There was an error adjusting your account. Please verify the email is unique and you type the same password.")
             console.error(error);
         }
     };
-
+    const handleDeleteSubmit = async (event) => {
+        event.preventDefault();
+        try {
+            if (checkPassword === password) { // check to see if the user typed password correctly
+                const response = await axios.post(`${apiURI}/delete_user`);
+                navigate('/login');  // Redirect to login page
+            }
+            else {
+                alert("Please verify the password is typed correctly.")
+            }
+        } catch (error) {
+            alert("There was an error deleting your account.")
+            console.error(error);
+        }
+    };
 
 
     return (
@@ -61,6 +72,15 @@ function Settings() {
                 <input type="password" className="input-box" placeholder="Your New Password" onChange={(e) => setCheckPassword(e.target.value)}></input>
                 <a href={`${process.env.REACT_APP_FRONTEND_URL}/settings`} >
                     <button type='button' className='signup-btn'>Change Information</button>
+                </a>
+            </form>
+
+            <h1>Delete Account</h1>
+            <form onSubmit={handleDeleteSubmit}>
+                <label>Please Enter Your Password</label>
+                <input type="password" className="input-box" placeholder="Your Password" onChange={(e) => checkPassword(e.target.value)}></input>
+                <a href={`${process.env.REACT_APP_FRONTEND_URL}/settings`} >
+                    <button type='button' className='signup-btn'>Delete Account</button>
                 </a>
             </form>
 
