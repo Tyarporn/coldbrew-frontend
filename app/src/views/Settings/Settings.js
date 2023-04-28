@@ -15,6 +15,8 @@ function Settings() {
     const navigate = useNavigate();
 
     const apiURI = process.env.REACT_APP_BACKEND_URL;
+    // const apiURI = process.env.REACT_APP_LOCALHOST_URL
+
 
     const fetchUsers = async () => {
         return axios.get(`${apiURI}/show_users`)
@@ -37,11 +39,8 @@ function Settings() {
 
 
         try {
-            if (users.includes(email)) {
-                alert("This user already exists, use a different email.")
-            }
             if (checkPassword === password) { // check to see if the user typed password correctly
-                const response = await axios.post(`${apiURI}/update_user`, { 'username': email, 'password': password});
+                const response = await axios.post(`${apiURI}/update_user`, { 'username': currEmail, 'password': password}, {headers: { 'Content-Type': 'application/json'}});
                 navigate('/login');  // Redirect to login page
             }
             else {
@@ -72,7 +71,7 @@ function Settings() {
     return (
         <div className='Settings'>
             <h1>Change Information</h1>
-            <form onSubmit={handleSubmit}>
+            <form >
                 <label>Please Enter Your Current Email</label>
                 <input type="email" className="input-box" placeholder="Your Current Email" onChange={(e) => setCurrEmail(e.target.value)}></input>
                 <label>Please Enter Your Current Password</label>
@@ -89,11 +88,11 @@ function Settings() {
             </form>
 
             <h1>Delete Account</h1>
-            <form onSubmit={handleDeleteSubmit}>
+            <form >
                 <label>Please Enter Your Password</label>
                 <input type="password" className="input-box" placeholder="Your Password" onChange={(e) => checkPassword(e.target.value)}></input>
                 <a href={`${process.env.REACT_APP_FRONTEND_URL}/settings`} >
-                    <button type='button' className='signup-btn'>Delete Account</button>
+                    <button type='submit' className='signup-btn'>Delete Account</button>
                 </a>
             </form>
 
