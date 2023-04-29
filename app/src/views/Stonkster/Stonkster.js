@@ -57,6 +57,9 @@ function Stonkster() {
     return (
         <div>
             <Card image={images[3]} name={botName[3]} botDesc={botDescription[botName[3]]} botID={botID[botName[3]]}></Card>
+            <a href="https://discord.com/oauth2/authorize?client_id=1028785870163157082&scope=bot" >
+                <button onClick type='button' className='signup-btn'>Download Now!</button>
+            </a>
         </div>
     );
 }

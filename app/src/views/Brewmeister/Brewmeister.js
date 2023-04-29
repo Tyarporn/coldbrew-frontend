@@ -57,6 +57,9 @@ function Brewmeister() {
     return (
         <div>
             <Card image={images[0]} name={botName[0]} botDesc={botDescription[botName[0]]} botID={botID[botName[0]]}></Card>
+            <a href="https://discord.com/oauth2/authorize?client_id=1029079767443591220&scope=bot" >
+                <button onClick type='button' className='signup-btn'>Download Now!</button>
+            </a>
         </div>
     );
 }
