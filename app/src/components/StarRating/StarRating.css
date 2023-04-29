@@ -1,0 +1,21 @@
+button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display:inline-block;
+  }
+.on {
+    color: #000;
+  }
+.off {
+    color: #ccc;
+  }
+  
+body {
+    padding: 100px;
+  }
+
+#star-rating {
+    display:inline-block;
+}

@@ -3,6 +3,7 @@ import React from "react";
 import Card from '../../components/Card/Card'
 import {useState, useEffect} from 'react';
 import axios from "axios"
+import StarRating from '../../components/StarRating/StarRating';
 
 
 function Brewmeister() {
@@ -60,6 +61,10 @@ function Brewmeister() {
             <a href="https://discord.com/oauth2/authorize?client_id=1029079767443591220&scope=bot" >
                 <button onClick type='button' className='signup-btn'>Download Now!</button>
             </a>
+
+            {/* <div className='rating'>
+                <StarRating/>
+            </div> */}
         </div>
     );
 }
