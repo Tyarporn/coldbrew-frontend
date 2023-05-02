@@ -61,10 +61,6 @@ function Brewmeister() {
             <a href="https://discord.com/oauth2/authorize?client_id=1029079767443591220&scope=bot" >
                 <button onClick type='button' className='signup-btn'>Download Now!</button>
             </a>
-
-            {/* <div className='rating'>
-                <StarRating/>
-            </div> */}
         </div>
     );
 }
