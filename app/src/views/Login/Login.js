@@ -18,7 +18,7 @@ function Login() {
         event.preventDefault();
     
         try {
-          const response = await axios.post(`${apiURI}/auth`, {'username': email, 'password': password});
+          const response = await axios.post(`${apiURI}/dev_endpoints/auth`, {'username': email, 'password': password});
           const token = response.data.token;
           localStorage.setItem('token', token);
           navigate('/home');  // Redirect to the homepage
