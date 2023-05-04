@@ -6,8 +6,9 @@ The front end for coldbrew-coders, an NYU senior design project for a product th
 1. Clone the repository onto your local machine with ```https://github.com/Tyarporn/coldbrew-frontend```.
 2. Create a new terminal shell
 3. Navigate to server with ```cd app``` and run  ```npm install``` to download the necessary package dependencies.
-4. Run ```npm start``` and open the react app on "http://localhost:3000/"
-5. Run the back-end server in a separate terminal shell, please redirect to https://github.com/Tyarporn/coldbrew-coders/blob/main/README.md for instructions.
+4. Run ```nvm install 16``` if you encounter build issues.
+5. Run ```npm start``` and open the react app on "http://localhost:3000/"
+6. Run the back-end server in a separate terminal shell, please redirect to https://github.com/Tyarporn/coldbrew-coders/blob/main/README.md for instructions.
 
 Be sure you are using nvm version 16.xx.x, as errors may occur otherwise
 
